@@ -1,0 +1,22 @@
+# dev stage
+FROM node:12.22-alpine as dev-stage
+
+WORKDIR /app
+
+COPY ./frontend/package*.json /app/
+RUN npm install
+COPY ./frontend /app/
+
+# build stage
+FROM dev-stage as build-stage
+RUN npx browserslist@latest --update-db
+RUN npm run build
+
+# production stage
+FROM node:lts-alpine as prod-stage
+
+RUN npm install -g http-server
+
+COPY --from=build-stage /app/dist /dist
+
+CMD [ "http-server", "dist" ]

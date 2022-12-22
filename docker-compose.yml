@@ -1,0 +1,90 @@
+version: "3"
+
+services:
+  redis:
+    image: redis:alpine
+    container_name: celery_redis
+    expose:
+      - 6379
+    ports:
+      - 6379:6379
+
+  backend:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/Dockerfile.backend
+    working_dir: "/app/"
+    # well, to keep it running
+    command: tail -f /dev/null
+    volumes:
+      - .:/app
+      - ~/.ssh:/root/.ssh
+    ports:
+      - 8000:8000
+    container_name: celery_back
+    depends_on:
+      - postgresql
+      - redis
+
+  worker_flow:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/Dockerfile.backend
+    command: celery -A poccelery worker -n worker_flow --autoscale=3,2 -Q esms_flow,lpi_flow,cnsa_flow
+    volumes:
+      - .:/app
+    depends_on:
+      - backend
+      - redis
+
+  flower:
+    image: mher/flower:latest
+    container_name: celery_flower
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - FLOWER_PORT=5555
+      - FLOWER_URL_PREFIX=flower
+    depends_on:
+      - worker_flow
+      - redis
+
+  frontend:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/Dockerfile.frontend
+      target: prod-stage
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    container_name: celery_front
+
+  postgresql:
+    image: postgres:14.0
+    container_name: celery_postgres
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: root
+    volumes:
+      - postgres14:/var/lib/posgresql/data
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./htpasswd:/etc/nginx/.htpasswd
+    ports:
+      - 8080:80
+    depends_on:
+      - redis
+      - worker_flow
+      - backend
+      - flower
+      - frontend
+
+volumes:
+  postgres14:

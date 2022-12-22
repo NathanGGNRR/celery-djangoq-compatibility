@@ -1,0 +1,102 @@
+DEBUG 2022-01-14 10:27:03,048 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Worker: Preparing bootsteps.
+DEBUG 2022-01-14 10:27:03,051 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Worker: Building graph...
+DEBUG 2022-01-14 10:27:03,052 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Worker: New boot order: {Timer, Hub, Pool, Autoscaler, Beat, StateDB, Consumer}
+DEBUG 2022-01-14 10:27:03,060 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Consumer: Preparing bootsteps.
+DEBUG 2022-01-14 10:27:03,061 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Consumer: Building graph...
+DEBUG 2022-01-14 10:27:03,083 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Consumer: New boot order: {Connection, Events, Mingle, Tasks, Control, Agent, Gossip, Heart, event loop}
+DEBUG 2022-01-14 10:27:03,088 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Worker: Starting Hub
+DEBUG 2022-01-14 10:27:03,089 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:117 -> ^-- substep ok
+DEBUG 2022-01-14 10:27:03,089 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Worker: Starting Pool
+DEBUG 2022-01-14 10:27:03,251 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:117 -> ^-- substep ok
+DEBUG 2022-01-14 10:27:03,252 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Worker: Starting Autoscaler
+DEBUG 2022-01-14 10:27:03,253 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:117 -> ^-- substep ok
+DEBUG 2022-01-14 10:27:03,253 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Worker: Starting Consumer
+DEBUG 2022-01-14 10:27:03,254 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Consumer: Starting Connection
+INFO 2022-01-14 10:27:03,269 connection:/usr/local/lib/python3.8/site-packages/celery/worker/consumer/connection.py:22 -> Connected to redis://redis:6379/0
+DEBUG 2022-01-14 10:27:03,270 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:117 -> ^-- substep ok
+DEBUG 2022-01-14 10:27:03,271 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Consumer: Starting Events
+DEBUG 2022-01-14 10:27:03,279 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:117 -> ^-- substep ok
+DEBUG 2022-01-14 10:27:03,280 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Consumer: Starting Mingle
+INFO 2022-01-14 10:27:03,281 mingle:/usr/local/lib/python3.8/site-packages/celery/worker/consumer/mingle.py:40 -> mingle: searching for neighbors
+INFO 2022-01-14 10:27:04,296 mingle:/usr/local/lib/python3.8/site-packages/celery/worker/consumer/mingle.py:49 -> mingle: all alone
+DEBUG 2022-01-14 10:27:04,298 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:117 -> ^-- substep ok
+DEBUG 2022-01-14 10:27:04,299 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Consumer: Starting Tasks
+DEBUG 2022-01-14 10:27:04,308 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:117 -> ^-- substep ok
+DEBUG 2022-01-14 10:27:04,311 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Consumer: Starting Control
+DEBUG 2022-01-14 10:27:04,335 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:117 -> ^-- substep ok
+DEBUG 2022-01-14 10:27:04,336 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Consumer: Starting Gossip
+DEBUG 2022-01-14 10:27:04,340 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:117 -> ^-- substep ok
+DEBUG 2022-01-14 10:27:04,341 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Consumer: Starting Heart
+DEBUG 2022-01-14 10:27:04,347 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:117 -> ^-- substep ok
+DEBUG 2022-01-14 10:27:04,348 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Consumer: Starting event loop
+DEBUG 2022-01-14 10:27:04,350 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Worker: Hub.register Autoscaler...
+DEBUG 2022-01-14 10:27:04,351 bootsteps:/usr/local/lib/python3.8/site-packages/celery/bootsteps.py:259 -> | Worker: Hub.register Pool...
+INFO 2022-01-14 10:27:04,353 worker:/usr/local/lib/python3.8/site-packages/celery/apps/worker.py:176 -> celery@worker_flow ready.
+INFO 2022-01-14 10:27:07,356 control:/usr/local/lib/python3.8/site-packages/celery/worker/control.py:277 -> Events of group {task} enabled by remote.
+INFO 2022-01-14 10:27:19,891 strategy:/usr/local/lib/python3.8/site-packages/celery/worker/strategy.py:161 -> Task example.views.async_create_files[10150722-2f7b-4dc6-bd72-8640bc740b82] received
+DEBUG 2022-01-14 10:27:19,892 base:/usr/local/lib/python3.8/site-packages/celery/concurrency/base.py:148 -> TaskPool: Apply <function fast_trace_task at 0x7f3ce80f2dc0> (args:('example.views.async_create_files', '10150722-2f7b-4dc6-bd72-8640bc740b82', {'lang': 'py', 'task': 'example.views.async_create_files', 'id': '10150722-2f7b-4dc6-bd72-8640bc740b82', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '10150722-2f7b-4dc6-bd72-8640bc740b82', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen205@c749eddb54fe', 'ignore_result': False, 'properties': {'correlation_id': '10150722-2f7b-4dc6-bd72-8640bc740b82', 'reply_to': '96f200c5-8b23-39e3-9875-163f2e39c265', 'delivery_mode': 2, 'delivery_info': {'exchange': '', 'routing_key': 'esms_flow'}, 'priority': 0, 'body_encoding': 'base64', 'delivery_tag': '9fdfbee9-1437-490f-bd78-f42fba36a9a9'}, 'reply_to': '96f200c5-8b23-39e3-9875-163f2e39c265', 'correlation_id': '10150722-2f7b-4dc6-bd72-8640bc740b82', 'hostname': 'celery@worker_flow', 'delivery_info': {'exchange': '', 'routing_key': 'esms_flow', 'priority': 0, 'redelivered': None},... kwargs:{})
+INFO 2022-01-14 10:27:19,902 strategy:/usr/local/lib/python3.8/site-packages/celery/worker/strategy.py:161 -> Task example.views.async_create_files[111b8722-0f42-4109-afeb-f842616fb500] received
+DEBUG 2022-01-14 10:27:19,903 base:/usr/local/lib/python3.8/site-packages/celery/concurrency/base.py:148 -> TaskPool: Apply <function fast_trace_task at 0x7f3ce80f2dc0> (args:('example.views.async_create_files', '111b8722-0f42-4109-afeb-f842616fb500', {'lang': 'py', 'task': 'example.views.async_create_files', 'id': '111b8722-0f42-4109-afeb-f842616fb500', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '111b8722-0f42-4109-afeb-f842616fb500', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen205@c749eddb54fe', 'ignore_result': False, 'properties': {'correlation_id': '111b8722-0f42-4109-afeb-f842616fb500', 'reply_to': '96f200c5-8b23-39e3-9875-163f2e39c265', 'delivery_mode': 2, 'delivery_info': {'exchange': '', 'routing_key': 'esms_flow'}, 'priority': 0, 'body_encoding': 'base64', 'delivery_tag': 'd5e20842-5c49-4e3f-8a9f-c733dc538c30'}, 'reply_to': '96f200c5-8b23-39e3-9875-163f2e39c265', 'correlation_id': '111b8722-0f42-4109-afeb-f842616fb500', 'hostname': 'celery@worker_flow', 'delivery_info': {'exchange': '', 'routing_key': 'esms_flow', 'priority': 0, 'redelivered': None},... kwargs:{})
+INFO 2022-01-14 10:27:19,910 strategy:/usr/local/lib/python3.8/site-packages/celery/worker/strategy.py:161 -> Task example.views.async_create_files[6590d0b2-3a8d-43fa-9a4d-09e93d13b0ba] received
+INFO 2022-01-14 10:27:19,911 autoscale:/usr/local/lib/python3.8/site-packages/celery/worker/autoscale.py:121 -> Scaling up 1 processes.
+DEBUG 2022-01-14 10:27:19,995 views:/app/example/views.py:119 -> Fichier: 712188eac352489a838fc75e7c8b1987.txt
+DEBUG 2022-01-14 10:27:20,000 views:/app/example/views.py:119 -> Fichier: 35d232cc8899445bb72a3a8857a14422.txt
+DEBUG 2022-01-14 10:27:20,070 base:/usr/local/lib/python3.8/site-packages/celery/concurrency/base.py:148 -> TaskPool: Apply <function fast_trace_task at 0x7f3ce80f2dc0> (args:('example.views.async_create_files', '6590d0b2-3a8d-43fa-9a4d-09e93d13b0ba', {'lang': 'py', 'task': 'example.views.async_create_files', 'id': '6590d0b2-3a8d-43fa-9a4d-09e93d13b0ba', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '6590d0b2-3a8d-43fa-9a4d-09e93d13b0ba', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen205@c749eddb54fe', 'ignore_result': False, 'properties': {'correlation_id': '6590d0b2-3a8d-43fa-9a4d-09e93d13b0ba', 'reply_to': '96f200c5-8b23-39e3-9875-163f2e39c265', 'delivery_mode': 2, 'delivery_info': {'exchange': '', 'routing_key': 'esms_flow'}, 'priority': 0, 'body_encoding': 'base64', 'delivery_tag': 'fd7fd056-3ceb-4037-83f1-7df790b1e83c'}, 'reply_to': '96f200c5-8b23-39e3-9875-163f2e39c265', 'correlation_id': '6590d0b2-3a8d-43fa-9a4d-09e93d13b0ba', 'hostname': 'celery@worker_flow', 'delivery_info': {'exchange': '', 'routing_key': 'esms_flow', 'priority': 0, 'redelivered': None},... kwargs:{})
+INFO 2022-01-14 10:27:20,084 strategy:/usr/local/lib/python3.8/site-packages/celery/worker/strategy.py:161 -> Task example.views.async_create_files[de8a6016-412c-4999-8c63-2c7a38544fd4] received
+DEBUG 2022-01-14 10:27:20,085 base:/usr/local/lib/python3.8/site-packages/celery/concurrency/base.py:148 -> TaskPool: Apply <function fast_trace_task at 0x7f3ce80f2dc0> (args:('example.views.async_create_files', 'de8a6016-412c-4999-8c63-2c7a38544fd4', {'lang': 'py', 'task': 'example.views.async_create_files', 'id': 'de8a6016-412c-4999-8c63-2c7a38544fd4', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'de8a6016-412c-4999-8c63-2c7a38544fd4', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen205@c749eddb54fe', 'ignore_result': False, 'properties': {'correlation_id': 'de8a6016-412c-4999-8c63-2c7a38544fd4', 'reply_to': '96f200c5-8b23-39e3-9875-163f2e39c265', 'delivery_mode': 2, 'delivery_info': {'exchange': '', 'routing_key': 'esms_flow'}, 'priority': 0, 'body_encoding': 'base64', 'delivery_tag': '2e01869b-fbe7-421c-8edb-7df0cc6f9a59'}, 'reply_to': '96f200c5-8b23-39e3-9875-163f2e39c265', 'correlation_id': 'de8a6016-412c-4999-8c63-2c7a38544fd4', 'hostname': 'celery@worker_flow', 'delivery_info': {'exchange': '', 'routing_key': 'esms_flow', 'priority': 0, 'redelivered': None},... kwargs:{})
+INFO 2022-01-14 10:27:20,105 strategy:/usr/local/lib/python3.8/site-packages/celery/worker/strategy.py:161 -> Task example.views.async_create_files[76522331-4060-41cf-a6e0-b578af873b1f] received
+DEBUG 2022-01-14 10:27:20,160 views:/app/example/views.py:119 -> Fichier: 28bd67c45cc043d08d019d3fd4745269.txt
+DEBUG 2022-01-14 10:27:23,052 views:/app/example/views.py:119 -> Fichier: a65f7b99dcb648408dc098ccc14311d2.txt
+DEBUG 2022-01-14 10:27:23,108 views:/app/example/views.py:119 -> Fichier: d0b89277671542499903b6df569bdfa6.txt
+DEBUG 2022-01-14 10:27:23,437 views:/app/example/views.py:119 -> Fichier: 0fe84cacc4de4591a457716860786934.txt
+DEBUG 2022-01-14 10:27:25,561 views:/app/example/views.py:119 -> Fichier: 117a9c05f0ba476896fb6053ecdf0184.txt
+DEBUG 2022-01-14 10:27:25,735 views:/app/example/views.py:119 -> Fichier: dc37cacc41b941d0b28f9301ec23210f.txt
+DEBUG 2022-01-14 10:27:26,241 views:/app/example/views.py:119 -> Fichier: ff8e1be477f44ea1a3994b86a5789684.txt
+DEBUG 2022-01-14 10:27:27,020 views:/app/example/views.py:119 -> Fichier: 400a4d079e9f49f2b3fdbd68f783a54c.txt
+DEBUG 2022-01-14 10:27:27,598 views:/app/example/views.py:119 -> Fichier: 25159ed6e0b5429f83508970bcfc7f13.txt
+DEBUG 2022-01-14 10:27:28,066 views:/app/example/views.py:119 -> Fichier: 28b140e1e38c4528834e7c67683ec628.txt
+DEBUG 2022-01-14 10:27:28,703 views:/app/example/views.py:119 -> Fichier: 3ba63986b8174186abe46dc7fb8dc604.txt
+DEBUG 2022-01-14 10:27:29,532 views:/app/example/views.py:119 -> Fichier: bfd810f5162b43a589dbfab3eaaeece9.txt
+DEBUG 2022-01-14 10:27:30,083 views:/app/example/views.py:119 -> Fichier: 7e1259840b384a73b3f241c9650b864c.txt
+DEBUG 2022-01-14 10:27:30,563 views:/app/example/views.py:119 -> Fichier: 1d7442e2512d40ac8d1c1e9a85755618.txt
+DEBUG 2022-01-14 10:27:31,631 views:/app/example/views.py:119 -> Fichier: c4eb36fd4eca467cad0c7b328e86fee9.txt
+DEBUG 2022-01-14 10:27:32,298 views:/app/example/views.py:119 -> Fichier: c187f0b53d0c4069bf0286c92ae2360e.txt
+DEBUG 2022-01-14 10:27:33,046 views:/app/example/views.py:119 -> Fichier: 98a013a0e6ff4341abb973ef14b2a60c.txt
+DEBUG 2022-01-14 10:27:33,762 views:/app/example/views.py:119 -> Fichier: 009fc10b8b0b4550a7ddbd13725afca6.txt
+DEBUG 2022-01-14 10:27:34,417 views:/app/example/views.py:119 -> Fichier: b4dff7c037594663bb4741d333c9a61d.txt
+DEBUG 2022-01-14 10:27:34,610 views:/app/example/views.py:119 -> Fichier: 5b8dbb469dce47838b5f4993a9fb430e.txt
+DEBUG 2022-01-14 10:27:35,530 views:/app/example/views.py:119 -> Fichier: 2db6b11f7bd741498f942bc894c34022.txt
+DEBUG 2022-01-14 10:27:36,091 views:/app/example/views.py:119 -> Fichier: 29787185544d41838166a9a87e35e257.txt
+DEBUG 2022-01-14 10:27:36,202 views:/app/example/views.py:119 -> Fichier: 278b78754cd24ad98a745978374a606b.txt
+DEBUG 2022-01-14 10:27:37,251 views:/app/example/views.py:119 -> Fichier: c69ccca7c7494c6097fe513c9edd7c70.txt
+DEBUG 2022-01-14 10:27:37,711 views:/app/example/views.py:119 -> Fichier: 7b0aa90785364688a03960bf401caef9.txt
+DEBUG 2022-01-14 10:27:37,926 views:/app/example/views.py:119 -> Fichier: ed37c5a630bf47e0b5ea322931f0b0b7.txt
+DEBUG 2022-01-14 10:27:39,225 views:/app/example/views.py:119 -> Fichier: 81506fcb0eec45ca9ccf897da024ae3a.txt
+DEBUG 2022-01-14 10:27:39,346 views:/app/example/views.py:119 -> Fichier: d7124482d9b54baa8bde93f44b45c807.txt
+INFO 2022-01-14 10:27:39,590 trace:/usr/local/lib/python3.8/site-packages/celery/app/trace.py:131 -> Task example.views.async_create_files[6590d0b2-3a8d-43fa-9a4d-09e93d13b0ba] succeeded in 19.479035700000168s: None
+DEBUG 2022-01-14 10:27:39,592 base:/usr/local/lib/python3.8/site-packages/celery/concurrency/base.py:148 -> TaskPool: Apply <function fast_trace_task at 0x7f3ce80f2dc0> (args:('example.views.async_create_files', '76522331-4060-41cf-a6e0-b578af873b1f', {'lang': 'py', 'task': 'example.views.async_create_files', 'id': '76522331-4060-41cf-a6e0-b578af873b1f', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '76522331-4060-41cf-a6e0-b578af873b1f', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen205@c749eddb54fe', 'ignore_result': False, 'properties': {'correlation_id': '76522331-4060-41cf-a6e0-b578af873b1f', 'reply_to': '96f200c5-8b23-39e3-9875-163f2e39c265', 'delivery_mode': 2, 'delivery_info': {'exchange': '', 'routing_key': 'esms_flow'}, 'priority': 0, 'body_encoding': 'base64', 'delivery_tag': '8a09001a-55af-42f5-a235-7ca744062b72'}, 'reply_to': '96f200c5-8b23-39e3-9875-163f2e39c265', 'correlation_id': '76522331-4060-41cf-a6e0-b578af873b1f', 'hostname': 'celery@worker_flow', 'delivery_info': {'exchange': '', 'routing_key': 'esms_flow', 'priority': 0, 'redelivered': None},... kwargs:{})
+DEBUG 2022-01-14 10:27:39,655 views:/app/example/views.py:119 -> Fichier: 71bb57b7d62f41fe916dc9bf1de63cc4.txt
+INFO 2022-01-14 10:27:40,799 trace:/usr/local/lib/python3.8/site-packages/celery/app/trace.py:131 -> Task example.views.async_create_files[10150722-2f7b-4dc6-bd72-8640bc740b82] succeeded in 20.903668700000708s: None
+DEBUG 2022-01-14 10:27:40,866 views:/app/example/views.py:119 -> Fichier: 169c996ea60c43e1a7dead4a21b10a95.txt
+DEBUG 2022-01-14 10:27:41,170 views:/app/example/views.py:119 -> Fichier: d3324d8a087a4c2db5e3691d234f6cca.txt
+INFO 2022-01-14 10:27:41,327 trace:/usr/local/lib/python3.8/site-packages/celery/app/trace.py:131 -> Task example.views.async_create_files[111b8722-0f42-4109-afeb-f842616fb500] succeeded in 21.420919800000775s: None
+DEBUG 2022-01-14 10:27:42,091 views:/app/example/views.py:119 -> Fichier: 15f04c99b104466781c1bb0ee7ad61cc.txt
+DEBUG 2022-01-14 10:27:42,472 views:/app/example/views.py:119 -> Fichier: 7abb37a868314e3ab62d974ef626dfd2.txt
+DEBUG 2022-01-14 10:27:43,562 views:/app/example/views.py:119 -> Fichier: 30fb26396f07499a841da99a9a7fe962.txt
+DEBUG 2022-01-14 10:27:43,878 views:/app/example/views.py:119 -> Fichier: da371a7f9f4b44d98f632fcd43c68c1f.txt
+DEBUG 2022-01-14 10:27:44,834 views:/app/example/views.py:119 -> Fichier: ecc726fe58ad400cb0a75391c7f96764.txt
+DEBUG 2022-01-14 10:27:45,234 views:/app/example/views.py:119 -> Fichier: 3035ca66449d46cbb1d4cb04a8c163ca.txt
+DEBUG 2022-01-14 10:27:46,120 views:/app/example/views.py:119 -> Fichier: 629f237513fb40318eec94b1eba00af8.txt
+DEBUG 2022-01-14 10:27:46,445 views:/app/example/views.py:119 -> Fichier: 033b484116d34d3cb1ae76ac83092070.txt
+DEBUG 2022-01-14 10:27:47,471 views:/app/example/views.py:119 -> Fichier: 1b1e2409c9894703a1362e2e9b201edb.txt
+DEBUG 2022-01-14 10:27:47,785 views:/app/example/views.py:119 -> Fichier: 743c9f396dfc4e208342ed7ed36eaa2e.txt
+DEBUG 2022-01-14 10:27:48,816 views:/app/example/views.py:119 -> Fichier: 3c687b89842e428aabaa26b4733074cd.txt
+DEBUG 2022-01-14 10:27:49,150 views:/app/example/views.py:119 -> Fichier: cbfb1c2df6094b1896511bf7f744c473.txt
+DEBUG 2022-01-14 10:27:50,028 views:/app/example/views.py:119 -> Fichier: 7e9edf954f3e4a85ae7c4b1fdcd64e51.txt
+DEBUG 2022-01-14 10:27:50,289 views:/app/example/views.py:119 -> Fichier: 5313cf85ebac44a19a8dbc2253e16a09.txt
+DEBUG 2022-01-14 10:27:51,238 views:/app/example/views.py:119 -> Fichier: dfa112fdbc1c4d1a888e2340fdd94d49.txt
+DEBUG 2022-01-14 10:27:51,565 views:/app/example/views.py:119 -> Fichier: 7a2f768af4ad4e3f893ee1b9a94c1baa.txt
+DEBUG 2022-01-14 10:27:52,404 views:/app/example/views.py:119 -> Fichier: 3d82950126e74cb1829e1c6adafca828.txt
+INFO 2022-01-14 10:27:52,820 trace:/usr/local/lib/python3.8/site-packages/celery/app/trace.py:131 -> Task example.views.async_create_files[de8a6016-412c-4999-8c63-2c7a38544fd4] succeeded in 13.224467000000004s: None
+INFO 2022-01-14 10:27:53,440 trace:/usr/local/lib/python3.8/site-packages/celery/app/trace.py:131 -> Task example.views.async_create_files[76522331-4060-41cf-a6e0-b578af873b1f] succeeded in 12.636955099998886s: None
+INFO 2022-01-14 10:28:04,355 autoscale:/usr/local/lib/python3.8/site-packages/celery/worker/autoscale.py:125 -> Scaling down 1 processes.
